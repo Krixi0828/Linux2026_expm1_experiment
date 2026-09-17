@@ -2,9 +2,9 @@
 
 A numerical systems study of how to compute
 
-\[
+$$
 \operatorname{expm1}(x)=e^x-1
-\]
+$$
 
 under a fixed 32-bit fixed-point representation.
 
@@ -65,15 +65,15 @@ The first experiment compared two signed 32-bit fixed-point formats:
 
 Their fractional resolutions are:
 
-\[
+$$
 2^{-8}\approx3.91\times10^{-3}
-\]
+$$
 
 and
 
-\[
+$$
 2^{-24}\approx5.96\times10^{-8}.
-\]
+$$
 
 On the initial \([0,1]\) experiment:
 
@@ -94,11 +94,9 @@ experiments/00_q24_vs_q8_baseline/
 
 The initial Q8.24 implementation directly evaluates
 
-\[
-\operatorname{expm1}(x)
-=
-x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots
-\]
+$$
+\operatorname{expm1}(x)=x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots
+$$
 
 without range reduction.
 
@@ -116,9 +114,9 @@ For the direct 12-term Taylor baseline:
 
 The Q8.24 representable range is approximately
 
-\[
+$$
 [-128,128).
-\]
+$$
 
 Therefore, a pre-saturation intermediate magnitude of 500 indicates that the direct recurrence can exceed the available range long before the final value itself becomes problematic.
 
@@ -149,26 +147,23 @@ This shows that adding approximation work cannot solve a range problem.
 
 The original recurrence
 
-\[
+$$
 \frac{\text{term}\cdot x}{n}
-\]
+$$
 
 was compared with
 
-\[
+$$
 \left(\frac{\text{term}}{n}\right)x.
-\]
+$$
 
 The divide-first form reduced:
 
 - saturation-point rate from **35.84%** to **23.43%**
 - peak pre-saturation intermediate magnitude from **500** to **320**
 
-but increased maximum absolute error to:
+but increased maximum absolute error to **27.5875.**
 
-\[
-27.5875.
-\]
 
 This demonstrates a finite-precision trade-off:
 
@@ -182,9 +177,9 @@ Multiplying first increases range pressure, while dividing first introduces quan
 
 A standard logarithmic range reduction was then introduced:
 
-\[
+$$
 x=k\ln2+r.
-\]
+$$
 
 The Taylor approximation is evaluated only on the smaller residual \(r\), followed by reconstruction.
 
@@ -210,19 +205,17 @@ A shift-friendly alternative was also evaluated.
 
 The input is repeatedly reduced:
 
-\[
+$$
 x\rightarrow\frac{x}{2^m},
-\]
+$$
 
 and reconstructed with
 
-\[
-\operatorname{expm1}(2z)
-=
-2\operatorname{expm1}(z)
-+
+$$
+\operatorname{expm1}(2z)=
+2\operatorname{expm1}(z)+
 \operatorname{expm1}(z)^2.
-\]
+$$
 
 Results:
 
@@ -243,15 +236,15 @@ It is therefore a valid fixed-point-oriented alternative, but it does not outper
 
 The final design-space sweep generalizes the reduction to
 
-\[
+$$
 x=k\frac{\ln2}{N}+r,
-\]
+$$
 
 with
 
-\[
+$$
 N\in\{1,2,4,8,16,32,64\}.
-\]
+$$
 
 The goal is to study the trade-off between:
 
@@ -275,9 +268,9 @@ The goal is to study the trade-off between:
 
 All tested fine-grained reduction methods have:
 
-\[
+$$
 \text{saturation-point rate}=0.
-\]
+$$
 
 ## Interpretation
 
@@ -297,9 +290,9 @@ The trend is consistent with a new bottleneck emerging from fixed-point quantiza
 
 Within the tested design space:
 
-\[
+$$
 \boxed{N=8}
-\]
+$$
 
 provides the clearest **accuracy-cost knee point**.
 
@@ -579,7 +572,7 @@ The most important lesson is that fixed-point numerical design cannot be evaluat
 
 A robust implementation must consider:
 
-\[
+$$
 \text{Approximation Error}
 +
 \text{Quantization Error}
@@ -589,7 +582,7 @@ A robust implementation must consider:
 \text{Reconstruction Error}
 +
 \text{Computational Cost}.
-\]
+$$
 
 The experiments show that improving one dimension can expose a different bottleneck:
 
