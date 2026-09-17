@@ -1,12 +1,6 @@
 # Fixed-Point `expm1` Numerical Design-Space Exploration
 
-A numerical systems study of how to compute
-
-$$
-\operatorname{expm1}(x)=e^x-1
-$$
-
-under a fixed 32-bit fixed-point representation.
+A numerical systems study of how to compute `expm1(x) = e^x - 1` under a fixed 32-bit fixed-point representation.
 
 The project began with a simple comparison between **Q24.8** and **Q8.24**, then evolved into a systematic exploration of approximation order, operation ordering, range reduction, intermediate saturation, reconstruction error, and performance.
 
@@ -91,12 +85,9 @@ experiments/00_q24_vs_q8_baseline/
 ---
 
 # 2. Phase 1 — Direct Q8.24 Taylor Approximation
+The initial Q8.24 implementation directly evaluates the Taylor series:
 
-The initial Q8.24 implementation directly evaluates
-
-$$
-\operatorname{expm1}(x)=x+\frac{x^2}{2!}+\frac{x^3}{3!}+\cdots
-$$
+`expm1(x) = x + x²/2! + x³/3! + ...`
 
 without range reduction.
 
@@ -205,18 +196,11 @@ A shift-friendly alternative was also evaluated.
 
 The input is repeatedly reduced:
 
-$$
-x\rightarrow\frac{x}{2^m},
-$$
+`x -> x / 2^m`
 
-and reconstructed with
+and reconstructed using:
 
-$$
-\operatorname{expm1}(2z)=
-2\operatorname{expm1}(z)+
-\operatorname{expm1}(z)^2.
-$$
-
+`expm1(2z) = 2 * expm1(z) + expm1(z)^2`
 Results:
 
 | Metric | Repeated Halving |
