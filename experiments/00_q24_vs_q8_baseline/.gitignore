@@ -1,0 +1,8 @@
+# macOS Finder metadata
+.DS_Store
+
+# Matplotlib local cache/configuration
+.mplconfig/
+
+# Locally compiled executable
+generate_expm1_data

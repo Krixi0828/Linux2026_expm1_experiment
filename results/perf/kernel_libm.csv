@@ -1,0 +1,7 @@
+# method=libm scope=kernel
+224627077,,cycles,0.44%,52342240,100.00,,
+555904389,,instructions,0.01%,52342240,100.00,2.47,insn per cycle
+86388977,,branches,0.01%,52342240,100.00,,
+55050,,branch-misses,2.08%,52342240,100.00,0.06,of all branches
+198098,,cache-references,3.39%,52342240,100.00,,
+41632,,cache-misses,5.32%,52342240,100.00,21.02,of all cache refs

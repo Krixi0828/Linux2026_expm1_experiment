@@ -1,8 +1,15 @@
-# macOS Finder metadata
+# Python virtual environment
+.venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# C/C++ build artifacts
+/bin/
+/obj/
+*.o
+
+# Editor / OS temporary files
+.vscode/
 .DS_Store
-
-# Matplotlib local cache/configuration
-.mplconfig/
-
-# Locally compiled executable
-generate_expm1_data

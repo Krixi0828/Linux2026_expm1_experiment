@@ -1,0 +1,18 @@
+=== date ===
+2026-09-16T16:15:54+08:00
+=== uname ===
+Linux krixi-linux 6.17.0-35-generic #35~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue May 26 19:30:42 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+=== gcc ===
+gcc (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0
+=== CPU ===
+CPU(s):                                  16
+On-line CPU(s) list:                     0-15
+Model name:                              AMD Ryzen 7 5800U with Radeon Graphics
+CPU(s) scaling MHz:                      48%
+CPU max MHz:                             4508.0859
+CPU min MHz:                             407.3580
+NUMA node0 CPU(s)：                      0-15
+=== perf ===
+perf version 6.17.13
+=== perf_event_paranoid ===
+4

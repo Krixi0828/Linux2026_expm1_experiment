@@ -1,0 +1,7 @@
+# method=adaptive_rne scope=kernel
+1836124064,,cycles,0.32%,428752138,100.00,,
+3739527629,,instructions,0.00%,428752138,100.00,2.04,insn per cycle
+788770205,,branches,0.00%,428752138,100.00,,
+780572,,branch-misses,1.32%,428752138,100.00,0.10,of all branches
+1066189,,cache-references,4.07%,428752138,100.00,,
+239116,,cache-misses,8.38%,428752138,100.00,22.43,of all cache refs

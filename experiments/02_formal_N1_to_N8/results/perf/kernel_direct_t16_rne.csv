@@ -1,0 +1,7 @@
+# method=direct_t16_rne scope=kernel
+1087760094,,cycles,0.13%,249505380,100.00,,
+2575867811,,instructions,0.00%,249505380,100.00,2.37,insn per cycle
+542325165,,branches,0.00%,249505380,100.00,,
+168155,,branch-misses,1.27%,249505380,100.00,0.03,of all branches
+533833,,cache-references,2.24%,249505380,100.00,,
+76821,,cache-misses,5.73%,249505380,100.00,14.39,of all cache refs

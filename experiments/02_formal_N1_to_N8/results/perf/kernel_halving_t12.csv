@@ -1,0 +1,7 @@
+# method=halving_t12 scope=kernel
+796465476,,cycles,0.17%,182731730,100.00,,
+1984360310,,instructions,0.00%,182731730,100.00,2.49,insn per cycle
+387527755,,branches,0.00%,182731730,100.00,,
+136150,,branch-misses,1.12%,182731730,100.00,0.04,of all branches
+384459,,cache-references,3.51%,182731730,100.00,,
+55881,,cache-misses,5.53%,182731730,100.00,14.53,of all cache refs

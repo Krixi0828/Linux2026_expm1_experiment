@@ -1,0 +1,7 @@
+# method=rr_ln2_t12 scope=kernel
+471675947,,cycles,0.15%,110336256,100.00,,
+1529614089,,instructions,0.00%,110336256,100.00,3.24,insn per cycle
+325813554,,branches,0.00%,110336256,100.00,,
+446887,,branch-misses,0.26%,110336256,100.00,0.14,of all branches
+301433,,cache-references,1.29%,110336256,100.00,,
+43888,,cache-misses,2.58%,110336256,100.00,14.56,of all cache refs

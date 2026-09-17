@@ -1,0 +1,7 @@
+# method=halving_adaptive scope=kernel
+768926790,,cycles,0.04%,177768670,100.00,,
+2035296654,,instructions,0.00%,177768670,100.00,2.65,insn per cycle
+400824781,,branches,0.00%,177768670,100.00,,
+160510,,branch-misses,0.15%,177768670,100.00,0.04,of all branches
+381492,,cache-references,1.07%,177768670,100.00,,
+46257,,cache-misses,3.54%,177768670,100.00,12.13,of all cache refs

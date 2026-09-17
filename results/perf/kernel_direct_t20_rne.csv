@@ -1,0 +1,7 @@
+# method=direct_t20_rne scope=kernel
+1374632475,,cycles,0.60%,309257744,100.00,,
+2995934381,,instructions,0.00%,309257744,100.00,2.18,insn per cycle
+631629168,,branches,0.00%,309257744,100.00,,
+276733,,branch-misses,1.97%,309257744,100.00,0.04,of all branches
+706002,,cache-references,6.55%,309257744,100.00,,
+134606,,cache-misses,18.18%,309257744,100.00,19.07,of all cache refs

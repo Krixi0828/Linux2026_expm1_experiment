@@ -1,0 +1,7 @@
+# method=rr_ln2_adaptive scope=kernel
+454383176,,cycles,0.07%,103735770,100.00,,
+1457295147,,instructions,0.00%,103735770,100.00,3.21,insn per cycle
+296299844,,branches,0.00%,103735770,100.00,,
+567164,,branch-misses,1.04%,103735770,100.00,0.19,of all branches
+273182,,cache-references,2.31%,103735770,100.00,,
+42549,,cache-misses,2.34%,103735770,100.00,15.58,of all cache refs

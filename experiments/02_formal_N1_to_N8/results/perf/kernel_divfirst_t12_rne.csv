@@ -1,0 +1,7 @@
+# method=divfirst_t12_rne scope=kernel
+778456003,,cycles,0.08%,177374922,100.00,,
+2064170473,,instructions,0.00%,177374922,100.00,2.65,insn per cycle
+422201877,,branches,0.00%,177374922,100.00,,
+192808,,branch-misses,1.51%,177374922,100.00,0.05,of all branches
+399591,,cache-references,2.21%,177374922,100.00,,
+63842,,cache-misses,3.32%,177374922,100.00,15.98,of all cache refs
